@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C5150F2A-85A3-415D-847B-3CDDEEC62ADE}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>CrackCodeInterview</RootNamespace>
+    <AssemblyName>CrackCodeInterview</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Externalconsole>True</Externalconsole>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Externalconsole>True</Externalconsole>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="IRun.cs" />
+    <Compile Include="Chapter1\CheckAnagram.cs" />
+    <Compile Include="Chapter1\ReplaceSpace.cs" />
+    <Compile Include="Chapter1\RotateImage.cs" />
+    <Compile Include="Chapter1\ClearRowAndColumn.cs" />
+    <Compile Include="Chapter1\CheckRotationWithIsSubstringMethod.cs" />
+    <Compile Include="Chapter2\Node.cs" />
+    <Compile Include="Chapter2\LinkedList.cs" />
+    <Compile Include="Chapter2\ListAddition.cs" />
+    <Compile Include="Chapter2\GetCircularStartNodeInList.cs" />
+    <Compile Include="Chapter3\NodeStack.cs" />
+    <Compile Include="Chapter3\NodeStackWithMinimumNode.cs" />
+    <Compile Include="Chapter3\TripleStack.cs" />
+    <Compile Include="Chapter3\QuueByStack.cs" />
+    <Compile Include="Chapter3\SortStack.cs" />
+    <Compile Include="Chapter3\TowerOfHanoi.cs" />
+    <Compile Include="Chapter3\SetOfStacks.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Chapter1\" />
+    <Folder Include="Chapter2\" />
+    <Folder Include="Chapter3\" />
+  </ItemGroup>
+</Project>

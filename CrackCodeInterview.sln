@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrackCodeInterview", "CrackCodeInterview\CrackCodeInterview.csproj", "{C5150F2A-85A3-415D-847B-3CDDEEC62ADE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrackCodeInterviewTest", "CrackCodeInterviewTest\CrackCodeInterviewTest.csproj", "{A3D66CB1-ED94-49BB-8B23-DF67895947EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3D66CB1-ED94-49BB-8B23-DF67895947EC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A3D66CB1-ED94-49BB-8B23-DF67895947EC}.Debug|x86.Build.0 = Debug|Any CPU
+		{A3D66CB1-ED94-49BB-8B23-DF67895947EC}.Release|x86.ActiveCfg = Release|Any CPU
+		{A3D66CB1-ED94-49BB-8B23-DF67895947EC}.Release|x86.Build.0 = Release|Any CPU
+		{C5150F2A-85A3-415D-847B-3CDDEEC62ADE}.Debug|x86.ActiveCfg = Debug|x86
+		{C5150F2A-85A3-415D-847B-3CDDEEC62ADE}.Debug|x86.Build.0 = Debug|x86
+		{C5150F2A-85A3-415D-847B-3CDDEEC62ADE}.Release|x86.ActiveCfg = Release|x86
+		{C5150F2A-85A3-415D-847B-3CDDEEC62ADE}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = CrackCodeInterview\CrackCodeInterview.csproj
+	EndGlobalSection
+EndGlobal
