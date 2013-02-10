@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -53,11 +54,32 @@
     <Compile Include="Chapter3\SortStack.cs" />
     <Compile Include="Chapter3\TowerOfHanoi.cs" />
     <Compile Include="Chapter3\SetOfStacks.cs" />
+    <Compile Include="Chapter4\TreeNode.cs" />
+    <Compile Include="Chapter4\GraphNode.cs" />
+    <Compile Include="Chapter4\TreeUtility.cs" />
+    <Compile Include="Chapter4\TreeSolutions.cs" />
+    <Compile Include="Chapter4\GraphSolutions.cs" />
+    <Compile Include="Chapter9\Fibonacci.cs" />
+    <Compile Include="Chapter11\SortSolutions.cs" />
+    <Compile Include="Chapter9\RecursiveSolutions.cs" />
+    <Compile Include="Chapter11\CircusPeople.cs" />
+    <Compile Include="Chapter11\RankTree.cs" />
+    <Compile Include="Chapter11\RankTreeNode.cs" />
+    <Compile Include="Chapter9\ListComparer.cs" />
+    <Compile Include="Chapter11\TwoDIndex.cs" />
+    <Compile Include="Chapter9\Box.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Chapter1\" />
     <Folder Include="Chapter2\" />
     <Folder Include="Chapter3\" />
+    <Folder Include="Chapter4\" />
+    <Folder Include="Chapter9\" />
+    <Folder Include="Chapter11\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Chapter9\RecurrsionAndDP.txt" />
+    <None Include="Chapter11\SortAndSearch.txt" />
   </ItemGroup>
 </Project>

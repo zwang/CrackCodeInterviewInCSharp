@@ -3,7 +3,8 @@ using System.Threading;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
-
+using System.Linq;
+using System.Linq.Expressions;
 namespace CrackCodeInterview
 {
 	class Program
@@ -296,6 +297,8 @@ namespace CrackCodeInterview
 			}
 		}
 
+		delegate int Sq(int x);
+
 		public static void Main (string[] args)
 		{
 			//Chapter 1
@@ -318,7 +321,172 @@ namespace CrackCodeInterview
 			//TestHanoi();
 			//TestSetOfStacks();
 
-			//Chapter 4
+			//Chapter 4 
+			/*SortedSet<int> set = new SortedSet<int> ();
+			set.Add (2);
+			set.Add (5);
+			set.Add (23);
+			set.Add (11);
+			Console.WriteLine (set.Min);
+			foreach (var s in set) {
+				Console.WriteLine (s);
+			}
+
+			LinkedList<int> list = new LinkedList<int> (new List<int>{1,2,3,4,5});
+
+			var first =  list.AddFirst(55);
+
+
+			while (first!=null) {
+				Console.WriteLine(first.Value);
+				first = first.Next;
+			}
+
+			var last = list.AddLast(23);
+			list.Remove(3);
+			while (last!=null) {
+				Console.WriteLine(last.Value);
+				last = last.Previous;
+			}*/
+
+			//Print p = Hello;
+			//p+=Hello2;
+			//Debug.Assert(p.GetInvocationList().Length ==2);
+			//p=Hello2;
+			//Debug.Assert(p.GetInvocationList().Length ==1);
+			//p("Hello");
+			//
+			//Action<string> a = Hello;
+			//a.Invoke("Test action");
+			//
+			//Func<int,int, int> f = Sum;
+			//var s = f.Invoke(2,3);
+			//Debug.Assert(s==5, "s is not 5");
+			//
+			//Print2<string> p2 = Hello;
+			//p2.Invoke("Test method");
+			//
+			//TestDelegate(Hello2, "Test delegate as parameter");
+			//
+			//Thread t = new Thread (Go);
+			//t.Start();
+			//t.Join();
+			//Console.WriteLine ("Thread t has ended!");
+			//
+			//int[] A = new int[]{2,4,6,9,12,0,0,0,0,0};
+			//int[] B = new int[]{1,3,5,7,8};
+			//SortSolutions.MergeTwoSortedArray (A, B, 5, 5);
+			//foreach (int i in A) {
+			//	Console.WriteLine (i);
+			//}
+
+			//var strings = RecursiveSolutions.PermulateString ("hellefff");
+			//Console.WriteLine(strings.Count);
+
+			//Console.WriteLine(RecursiveSolutions.GetCountOfPermulationsOfString("hellefff"));
+//			foreach (var s in strings) {
+//				Console.WriteLine(s);
+//			}
+
+			//RecursiveSolutions.PrintParentheses("",3,3);
+
+			//RecursiveSolutions.RepresentingCents(25, new List<int>());
+			//RecursiveSolutions.OutPutListOfCents();
+
+			//RecursiveSolutions.CountStepsOfClimingStairs(13, new List<int>());
+
+			//int[,] matrix = new int[,]{
+			//	{1,1,0,1},
+			//	{0,1,1,0},
+			//	{1,0,1,1},
+			//	{1,1,1,1}
+			//};
+			//RecursiveSolutions.OutPutPathOfRobotInMatrix(matrix, new TwoDIndex(0,0), null, new TwoDIndex(3,3));
+
+			//Find magic index
+			//int[] array = {0,0,1,2,2,4,4,5,5,5,7,8,13,14};
+			//Console.WriteLine(RecursiveSolutions.FindMagicIndex(array, 0, array.Length-1));
+
+			//var intList = new List<int>{1,1,1,1,2};
+			//var result = RecursiveSolutions.GetAllSubSets (intList);
+			//foreach (var l in result) {
+			//	RecursiveSolutions.Output(l);
+			//}
+
+			//RecursiveSolutions.PlaceQueuesInChessBoard();
+
+			//Get the stack with the greatest height
+			//var boxes = new List<Box>{
+			//	new Box(10,12,14),
+			//	new Box(11,12,14),
+			//	new Box(11,11,14),
+			//	new Box(3,4,5),
+			//	new Box(12,12,14),
+			//};
+			//RecursiveSolutions.PrintStacks(boxes);
+
+			//Console.WriteLine ("hello".OrderBy (c => c).Aggregate ("", (s,c) => s + c));
+
+			var people = new List<CircusPeople>{
+				new CircusPeople(65,100),
+				new CircusPeople(70,80),
+				new CircusPeople(56,90),
+				new CircusPeople(70,100),
+				new CircusPeople(75,190),
+				new CircusPeople(60,95),
+				new CircusPeople(68,110),
+				new CircusPeople(69, 97),
+			};
+			var result = SortSolutions.BuildCircusTowerBySorting (people);
+			foreach (var p in result) {
+				Console.WriteLine(p.ToString());
+			}
+
+
+			//RankTree tree = new RankTree();
+			//Console.WriteLine(tree.GetRank(2));
+			//tree.Track(1);
+			//Console.WriteLine( tree.GetRank(2));
+			//Console.WriteLine(tree.GetRank(1));
+			//tree.Track(1);
+			//Console.WriteLine(tree.GetRank(1));
+			//tree.Track(0);
+			//Console.WriteLine(tree.GetRank(1));
+			//tree.Track(3);
+			//Console.WriteLine(tree.GetRank(1));
+			//Console.WriteLine(tree.GetRank(3));
+
+
+		}
+
+		static void Go()
+		{
+			for (int i = 0; i < 1000; i++) Console.Write ("y");
+		}
+
+		private static void Hello(string s)
+		{
+			Console.WriteLine("1");
+			Console.WriteLine(s);
+		}
+
+		private static void Hello2(string s)
+		{
+			Console.WriteLine("2");
+			Console.WriteLine(s);
+		}
+
+		private static int Sum(int a, int b){
+			return a+b;
+		}
+
+		delegate void Print(string s);
+
+		delegate void Print2<T>(T s);
+
+	    static void TestDelegate( Print function, string s)
+		{
+			function(s);
 		}
 	}
 }

@@ -33,9 +33,22 @@
     <Reference Include="nunit.framework">
       <Private>False</Private>
     </Reference>
+    <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Test.cs" />
+    <Compile Include="Chapter9\FibonacciTest.cs" />
+    <Compile Include="Chapter11\SortSolutionsTest.cs" />
+    <Compile Include="Chapter9\RecursiveSolutionsTest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\CrackCodeInterview\CrackCodeInterview.csproj">
+      <Project>{C5150F2A-85A3-415D-847B-3CDDEEC62ADE}</Project>
+      <Name>CrackCodeInterview</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Chapter9\" />
+    <Folder Include="Chapter11\" />
+  </ItemGroup>
 </Project>
