@@ -68,6 +68,8 @@
     <Compile Include="Chapter9\ListComparer.cs" />
     <Compile Include="Chapter11\TwoDIndex.cs" />
     <Compile Include="Chapter9\Box.cs" />
+    <Compile Include="Others\Pow.cs" />
+    <Compile Include="Others\RandomSet.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -77,6 +79,7 @@
     <Folder Include="Chapter4\" />
     <Folder Include="Chapter9\" />
     <Folder Include="Chapter11\" />
+    <Folder Include="Others\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Chapter9\RecurrsionAndDP.txt" />

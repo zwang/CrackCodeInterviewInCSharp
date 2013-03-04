@@ -7,6 +7,14 @@ using System.Linq;
 using System.Linq.Expressions;
 namespace CrackCodeInterview
 {
+	abstract class Hello{
+
+		public Hello(){
+		}
+
+		public abstract void TestMethod();
+	}
+
 	class Program
 	{
 		static void TestCheckAnagram ()
@@ -427,21 +435,20 @@ namespace CrackCodeInterview
 
 			//Console.WriteLine ("hello".OrderBy (c => c).Aggregate ("", (s,c) => s + c));
 
-			var people = new List<CircusPeople>{
-				new CircusPeople(65,100),
-				new CircusPeople(70,80),
-				new CircusPeople(56,90),
-				new CircusPeople(70,100),
-				new CircusPeople(75,190),
-				new CircusPeople(60,95),
-				new CircusPeople(68,110),
-				new CircusPeople(69, 97),
-			};
-			var result = SortSolutions.BuildCircusTowerBySorting (people);
-			foreach (var p in result) {
-				Console.WriteLine(p.ToString());
-			}
-
+			//var people = new List<CircusPeople>{
+			//	new CircusPeople(65,100),
+			//	new CircusPeople(70,80),
+			//	new CircusPeople(56,90),
+			//	new CircusPeople(70,100),
+			//	new CircusPeople(75,190),
+			//	new CircusPeople(60,95),
+			//	new CircusPeople(68,110),
+			//	new CircusPeople(69, 97),
+			//};
+			//var result = SortSolutions.BuildCircusTowerBySorting (people);
+			//foreach (var p in result) {
+			//	Console.WriteLine(p.ToString());
+			//}
 
 			//RankTree tree = new RankTree();
 			//Console.WriteLine(tree.GetRank(2));
@@ -456,12 +463,34 @@ namespace CrackCodeInterview
 			//Console.WriteLine(tree.GetRank(1));
 			//Console.WriteLine(tree.GetRank(3));
 
+			//Test Random Set
+			var set = new RandomSet<int> ();
+			set.Insert (2);
+			set.Insert (4);
+			set.Insert (3);
+			set.Insert (4);
+			set.Insert (1);
+			Console.WriteLine(set.GetRandomValue ());
+			Console.WriteLine(set.GetRandomValue ());
+			Console.WriteLine(set.GetRandomValue ());
+			Console.WriteLine(set.GetRandomValue ());
+			Console.WriteLine (set.Contains (4));
+			set.Delete (4);
+			Console.WriteLine (set.Contains (4));
+			Console.WriteLine(set.GetRandomValue ());
+			Console.WriteLine(set.GetRandomValue ());
+			Console.WriteLine(set.GetRandomValue ());
+			Console.WriteLine(set.GetRandomValue ());
+
+			Console.WriteLine(AddWithOutOperator(int.MaxValue,int.MaxValue));
 
 		}
 
 		static void Go()
 		{
+			Console.WriteLine("Thread Start time: {0}", DateTime.UtcNow);
 			for (int i = 0; i < 1000; i++) Console.Write ("y");
+			Console.WriteLine("Thread End time: {0}", DateTime.UtcNow);
 		}
 
 		private static void Hello(string s)
@@ -487,6 +516,17 @@ namespace CrackCodeInterview
 	    static void TestDelegate( Print function, string s)
 		{
 			function(s);
+		}
+
+		static int AddWithOutOperator(int a, int b)
+		{
+			if (b == 0) {
+				return a;
+			}
+			int resultWithOutExtra = a ^ b;
+			int extra = (a & b) << 1;
+			return  AddWithOutOperator (extra, resultWithOutExtra);
+
 		}
 	}
 }

@@ -20,7 +20,6 @@ namespace CrackCodeInterview
 			int mergeIndex = lengthA + lengthB - 1;
 			int indexB = lengthB - 1;
 			int indexA = lengthA - 1;
-			int countOfA = A.Length;
 			while (indexB >=0 && indexA>=0) {
 				if (B [indexB] >= A [indexA]) {
 					A [mergeIndex] = B [indexB];

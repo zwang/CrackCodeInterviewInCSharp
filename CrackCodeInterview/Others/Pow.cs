@@ -2,7 +2,7 @@ using System;
 
 namespace CrackCodeInterview
 {
-	public static class OtherProblems
+	public static class Pow
 	{
 		public static double PowByMultiple(double a, int b)
 		{
@@ -22,6 +22,9 @@ namespace CrackCodeInterview
 		public static double PowByRecursive(double a, int b)
 		{
 			//Can optimize by using cache
+			if (a == 0) {
+				return 0;
+			}
 			if (b < 0) {
 				b=0-b;
 				a = 1.0/a;
@@ -43,6 +46,9 @@ namespace CrackCodeInterview
 		public static double PowByIteration(double a, int b)
 		{
 			//Can optimize by using cache
+			if (a == 0) {
+				return 0;
+			}
 			if (b < 0) {
 				b=0-b;
 				a = 1.0/a;
