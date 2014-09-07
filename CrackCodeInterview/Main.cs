@@ -309,6 +309,20 @@ namespace CrackCodeInterview
 
 		public static void Main (string[] args)
 		{
+			//string s = "abcdefghi";
+			//RotateArray.RotateCharsArrayImproved(s.ToArray(), 4);
+
+//			var array = new int[]{1,2,3,4,5,1,3,4,5,6};
+//			var result = SearchArray.FindNumbersAppearedOnce(array);
+//			foreach(var n in result){
+//				Console.WriteLine(n);
+//			}
+
+			var result  = Pyramid.GetPyramidLevel(4);
+			foreach(var i in result){
+				Console.WriteLine(i);
+			}
+
 			//Chapter 1
 			//TestReplaceSpace ();
 			//TestCheckAnagram ();
@@ -464,26 +478,31 @@ namespace CrackCodeInterview
 			//Console.WriteLine(tree.GetRank(3));
 
 			//Test Random Set
-			var set = new RandomSet<int> ();
-			set.Insert (2);
-			set.Insert (4);
-			set.Insert (3);
-			set.Insert (4);
-			set.Insert (1);
-			Console.WriteLine(set.GetRandomValue ());
-			Console.WriteLine(set.GetRandomValue ());
-			Console.WriteLine(set.GetRandomValue ());
-			Console.WriteLine(set.GetRandomValue ());
-			Console.WriteLine (set.Contains (4));
-			set.Delete (4);
-			Console.WriteLine (set.Contains (4));
-			Console.WriteLine(set.GetRandomValue ());
-			Console.WriteLine(set.GetRandomValue ());
-			Console.WriteLine(set.GetRandomValue ());
-			Console.WriteLine(set.GetRandomValue ());
+			//var set = new RandomSet<int> ();
+			//set.Insert (2);
+			//set.Insert (4);
+			//set.Insert (3);
+			//set.Insert (4);
+			//set.Insert (1);
+			//Console.WriteLine(set.GetRandomValue ());
+			//Console.WriteLine(set.GetRandomValue ());
+			//Console.WriteLine(set.GetRandomValue ());
+			//Console.WriteLine(set.GetRandomValue ());
+			//Console.WriteLine (set.Contains (4));
+			//set.Delete (4);
+			//Console.WriteLine (set.Contains (4));
+			//Console.WriteLine(set.GetRandomValue ());
+			//Console.WriteLine(set.GetRandomValue ());
+			//Console.WriteLine(set.GetRandomValue ());
+			//Console.WriteLine(set.GetRandomValue ());
+			//
+			//Console.WriteLine(AddWithOutOperator(int.MaxValue,int.MaxValue));
 
-			Console.WriteLine(AddWithOutOperator(int.MaxValue,int.MaxValue));
-
+			List<string> lst = new List<string>{
+				"hello",
+				"world",
+			};
+			Console.WriteLine(lst.Aggregate("", (s,c)=>s+c));
 		}
 
 		static void Go()

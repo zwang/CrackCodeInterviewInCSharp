@@ -15,8 +15,9 @@ namespace CrackCodeInterview
 		public static void FindSumInATree(TreeNode<int> root, int sum, int level, List<int> buff)
 		{
 			if (root == null) return;
+			buff.Add(root.Value);
 			int tmp = sum;
-			for (int i = level; i > -1; i--)
+			for (int i = level; i >= 0; i--)
 			{
 				tmp -= buff[i];
 				if (tmp == 0) Output(buff, i, level);

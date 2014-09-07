@@ -71,6 +71,9 @@
     <Compile Include="Chapter9\Box.cs" />
     <Compile Include="Others\Pow.cs" />
     <Compile Include="Others\RandomSet.cs" />
+    <Compile Include="Others\RotateArray.cs" />
+    <Compile Include="Others\SearchArray.cs" />
+    <Compile Include="Others\Pyramid.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
